@@ -2,7 +2,8 @@
 [Jennifer McClelland](https://gitea.julius-kuehn.de/Jennifer.McClelland),
 [Karlmarx Thangamani](https://gitea.julius-kuehn.de/Karlmarx.Thangamani),
 [Tanja Riedel](https://gitea.julius-kuehn.de/Tanja.Riedel),
-[Florian Beyer](https://gitea.julius-kuehn.de/Florin.Beyer), Date 2023-08-04, Version 0.1 beta
+[Florian Beyer](https://gitea.julius-kuehn.de/Florin.Beyer), Date 2023-08-04, Version 1.0 beta
+[![DOI](https://zenodo.org/badge/674624358.svg)](https://zenodo.org/badge/latestdoi/674624358)
 
 # Processing Sentinel-1 SAR data to ARD
 
