@@ -1,0 +1,60 @@
+<graph id="Graph">	
+  	<version>1.0</version>	
+  	<node id="Read">		
+    		<operator>Read</operator>		
+    		<sources/>		
+    		<parameters class="com.bc.ceres.binding.dom.XppDomElement">			
+      			<file></file>			
+    		</parameters>		
+  	</node>	
+  	<node id="Polarimetric-Matrices">		
+    		<operator>Polarimetric-Matrices</operator>		
+    		<sources>			
+      			<sourceProduct refid="Read"/>			
+    		</sources>		
+    		<parameters class="com.bc.ceres.binding.dom.XppDomElement">			
+      			<matrix>C2</matrix>			
+    		</parameters>		
+  	</node>	
+  	<node id="Multilook">		
+    		<operator>Multilook</operator>		
+    		<sources>			
+      			<sourceProduct refid="Polarimetric-Matrices"/>			
+    		</sources>		
+    		<parameters class="com.bc.ceres.binding.dom.XppDomElement">			
+      			<sourceBands/>			
+      			<nRgLooks>3</nRgLooks>			
+      			<nAzLooks>1</nAzLooks>			
+      			<outputIntensity>false</outputIntensity>			
+      			<grSquarePixel>true</grSquarePixel>			
+    		</parameters>		
+  	</node>	
+  	<node id="Polarimetric-Speckle-Filter">		
+    		<operator>Polarimetric-Speckle-Filter</operator>		
+    		<sources>			
+      			<sourceProduct refid="Multilook"/>			
+    		</sources>		
+    		<parameters class="com.bc.ceres.binding.dom.XppDomElement">			
+      			<filter>Refined Lee Filter</filter>			
+      			<filterSize>5</filterSize>			
+      			<numLooksStr>1</numLooksStr>			
+      			<windowSize>5x5</windowSize>			
+      			<targetWindowSizeStr>3x3</targetWindowSizeStr>			
+      			<anSize>50</anSize>			
+      			<sigmaStr>0.9</sigmaStr>			
+      			<searchWindowSizeStr>15</searchWindowSizeStr>			
+      			<patchSizeStr>5</patchSizeStr>			
+      			<scaleSizeStr>1</scaleSizeStr>			
+    		</parameters>		
+  	</node>	
+  	<node id="Write">		
+    		<operator>Write</operator>		
+    		<sources>			
+      			<sourceProduct refid="Polarimetric-Speckle-Filter"/>			
+    		</sources>		
+    		<parameters class="com.bc.ceres.binding.dom.XppDomElement">			
+      			<file></file>			
+      			<formatName>BEAM-DIMAP</formatName>			
+    		</parameters>		
+  	</node>	
+</graph>

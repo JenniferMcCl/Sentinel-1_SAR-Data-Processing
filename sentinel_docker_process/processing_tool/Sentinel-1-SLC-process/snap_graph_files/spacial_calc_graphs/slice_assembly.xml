@@ -1,0 +1,37 @@
+<graph id="Graph">
+  <version>1.0</version>
+  <node id="Read (1)">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file></file>
+    </parameters>
+  </node>
+  <node id="Read (2)">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file></file>
+    </parameters>
+  </node>
+  <node id="SliceAssembly">
+    <operator>SliceAssembly</operator>
+    <sources>
+      <sourceProduct refid="Read (1)"/>
+      <sourceProduct.1 refid="Read (2)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <selectedPolarisations/>
+    </parameters>
+  </node>
+  <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="SliceAssembly"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file></file>
+      <formatName>BEAM-DIMAP</formatName>
+    </parameters>
+  </node>
+</graph>

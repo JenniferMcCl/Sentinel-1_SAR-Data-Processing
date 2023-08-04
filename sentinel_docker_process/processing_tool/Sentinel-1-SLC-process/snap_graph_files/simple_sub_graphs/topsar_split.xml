@@ -1,0 +1,33 @@
+<graph id="Graph">
+  <version>1.0</version>
+  <node id="Read (1)">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file></file>
+    <formatName>SENTINEL-1</formatName></parameters>
+  </node>
+  <node id="TOPSAR-Split">
+    <operator>TOPSAR-Split</operator>
+    <sources>
+      <sourceProduct refid="Read (1)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <subswath>IW2</subswath>
+      <selectedPolarisations>VH,VV</selectedPolarisations>
+      <firstBurstIndex>1</firstBurstIndex>
+      <lastBurstIndex>9999</lastBurstIndex>
+         <wktAoi></wktAoi>
+    </parameters>
+  </node>
+  <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="TOPSAR-Split"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file></file>
+      <formatName>BEAM-DIMAP</formatName>
+    </parameters>
+  </node>
+</graph>

@@ -1,0 +1,39 @@
+<graph id="Graph"> 
+<version>1.0</version>
+        <node id="Read (1)">
+                  <operator>Read</operator>
+                  <sources/>
+                  <parameters>
+                            <file></file>
+                            <formatName></formatName>
+                            <sourceBands/>
+                            <sourceMasks/>
+                            <pixelRegion/>
+                            <geometryRegion/>
+                            <copyMetadata>true</copyMetadata>
+                  </parameters>
+        </node>&gt;<node id="Apply-Orbit-File">
+                  <operator>Apply-Orbit-File</operator>
+                  <sources>
+                            <sourceProduct refid="Read (1)"/>
+                  </sources>
+                  <parameters>
+                            <orbitType>Sentinel Precise (Auto Download)</orbitType>
+                            <polyDegree>3</polyDegree>
+                            <continueOnFail>false</continueOnFail>
+                  </parameters>
+        </node>
+        <node id="Write">
+                  <operator>Write</operator>
+                  <sources>
+                            <sourceProduct refid="Apply-Orbit-File"/>
+                  </sources>
+                  <parameters>
+                            <file></file>
+                            <formatName>BEAM-DIMAP</formatName>
+                            <deleteOutputOnFailure>true</deleteOutputOnFailure>
+                            <writeEntireTileRows>false</writeEntireTileRows>
+                            <clearCacheAfterRowWrite>false</clearCacheAfterRowWrite>
+                  </parameters>
+        </node>
+</graph>

@@ -1,0 +1,132 @@
+<graph id="Graph">
+  <version>1.0</version>
+  <node id="Read (1)">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/media/data_storage/jennifer/development/test_output/spacial_output/S1A_IW_SLC__1SDV_20220314T053418_20220314T053445_042313_050B38_C57E_sw1_split.dim</file>
+    </parameters>
+  </node>
+  <node id="Read (2)">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/media/data_storage/jennifer/development/test_output/spacial_output/S1A_IW_SLC__1SDV_20220314T053418_20220314T053445_042313_050B38_C57E_sw2_split.dim</file>
+    </parameters>
+  </node>
+  <node id="Read (3)">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/media/data_storage/jennifer/development/test_output/spacial_output/S1A_IW_SLC__1SDV_20220314T053418_20220314T053445_042313_050B38_C57E_sw3_split.dim</file>
+    </parameters>
+  </node>
+  <node id="Read (4)">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/media/data_storage/jennifer/development/test_output/spacial_output/S1A_IW_SLC__1SDV_20220314T053442_20220314T053510_042313_050B38_0B46_sw1_split.dim</file>
+    </parameters>
+  </node>
+  <node id="Read (5)">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/media/data_storage/jennifer/development/test_output/spacial_output/S1A_IW_SLC__1SDV_20220314T053442_20220314T053510_042313_050B38_0B46_sw2_split.dim</file>
+    </parameters>
+  </node>
+  <node id="Read (6)">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/media/data_storage/jennifer/development/test_output/spacial_output/S1A_IW_SLC__1SDV_20220314T053442_20220314T053510_042313_050B38_0B46_sw3_split.dim</file>
+    </parameters>
+  </node>
+  <node id="SliceAssembly">
+    <operator>SliceAssembly</operator>
+    <sources>
+      <sourceProduct refid="Read (1)"/>
+      <sourceProduct.1 refid="Read (4)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <selectedPolarisations/>
+    </parameters>
+  </node>
+  <node id="SliceAssembly (2)">
+    <operator>SliceAssembly</operator>
+    <sources>
+      <sourceProduct refid="Read (2)"/>
+      <sourceProduct.1 refid="Read (5)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <selectedPolarisations/>
+    </parameters>
+  </node>
+  <node id="SliceAssembly (3)">
+    <operator>SliceAssembly</operator>
+    <sources>
+      <sourceProduct refid="Read (3)"/>
+      <sourceProduct.1 refid="Read (6)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <selectedPolarisations/>
+    </parameters>
+  </node>
+  <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="SliceAssembly"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/media/data_storage/jennifer/development/test_output/spacial_output/S1A_IW_SLC__1SDV_20220314T053418_20220314T053445_042313_050B38_C57E_sw1_split_slice</file>
+      <formatName>BEAM-DIMAP</formatName>
+    </parameters>
+  </node>
+  <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="SliceAssembly (2)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/media/data_storage/jennifer/development/test_output/spacial_output/S1A_IW_SLC__1SDV_20220314T053418_20220314T053445_042313_050B38_C57E_sw2_split_slice</file>
+      <formatName>BEAM-DIMAP</formatName>
+    </parameters>
+  </node>
+  <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="SliceAssembly (3)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/media/data_storage/jennifer/development/test_output/spacial_output/S1A_IW_SLC__1SDV_20220314T053418_20220314T053445_042313_050B38_C57E_sw3_split_slice</file>
+      <formatName>BEAM-DIMAP</formatName>
+    </parameters>
+  </node>
+  <applicationData id="Presentation">
+    <Description/>
+    <node id="Read (1)">
+      <displayPosition x="15.0" y="218.0"/>
+    </node>
+    <node id="Read (2)">
+      <displayPosition x="12.0" y="176.0"/>
+    </node>
+    <node id="Read (3)">
+      <displayPosition x="12.0" y="135.0"/>
+    </node>
+    <node id="Read (4)">
+      <displayPosition x="13.0" y="96.0"/>
+    </node>
+    <node id="Read (5)">
+      <displayPosition x="14.0" y="55.0"/>
+    </node>
+    <node id="Read (6)">
+      <displayPosition x="10.0" y="16.0"/>
+    </node>
+    <node id="SliceAssembly">
+      <displayPosition x="180.0" y="151.0"/>
+    </node>
+    <node id="Write">
+      <displayPosition x="379.0" y="158.0"/>
+    </node>
+  </applicationData>
+</graph>

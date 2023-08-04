@@ -1,0 +1,53 @@
+<graph id="Graph">
+  <version>1.0</version>
+  <node id="Read (1)">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file></file>
+    </parameters>
+  </node>
+  <node id="Terrain-Flattening">
+    <operator>Terrain-Flattening</operator>
+    <sources>
+      <sourceProduct refid="Read (1)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <sourceBands/>
+      <demName>SRTM 1Sec HGT</demName>
+      <demResamplingMethod>BICUBIC_INTERPOLATION</demResamplingMethod>
+      <externalDEMFile/>
+      <externalDEMNoDataValue>0.0</externalDEMNoDataValue>
+      <externalDEMApplyEGM>false</externalDEMApplyEGM>
+      <outputSimulatedImage>false</outputSimulatedImage>
+      <outputSigma0>false</outputSigma0>
+      <additionalOverlap>0.1</additionalOverlap>
+      <oversamplingMultiple>1.0</oversamplingMultiple>
+    </parameters>
+  </node>
+  <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="Terrain-Correction"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file></file>
+      <formatName>GeoTIFF</formatName>
+    </parameters>
+  </node>
+  <applicationData id="Presentation">
+    <Description/>
+    <node id="Read (1)">
+      <displayPosition x="0.0" y="0.0"/>
+    </node>
+    <node id="Terrain-Correction">
+      <displayPosition x="267.0" y="156.0"/>
+    </node>
+    <node id="TOPSAR-Deburst">
+      <displayPosition x="94.0" y="103.0"/>
+    </node>
+    <node id="Write">
+            <displayPosition x="455.0" y="135.0"/>
+    </node>
+  </applicationData>
+</graph>

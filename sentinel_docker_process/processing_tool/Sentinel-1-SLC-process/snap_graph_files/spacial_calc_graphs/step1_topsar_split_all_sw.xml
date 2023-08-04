@@ -1,0 +1,183 @@
+<graph id="Graph">
+  <version>1.0</version>
+  <node id="Read (1)">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/codede/Sentinel-1/SAR/SLC/2022/03/14/S1A_IW_SLC__1SDV_20220314T053418_20220314T053445_042313_050B38_C57E.SAFE/manifest.safe</file>
+    </parameters>
+  </node>
+  <node id="Read (2)">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/codede/Sentinel-1/SAR/SLC/2022/03/14/S1A_IW_SLC__1SDV_20220314T053418_20220314T053445_042313_050B38_C57E.SAFE/manifest.safe</file>
+    </parameters>
+  </node>
+  <node id="Read (3)">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/codede/Sentinel-1/SAR/SLC/2022/03/14/S1A_IW_SLC__1SDV_20220314T053418_20220314T053445_042313_050B38_C57E.SAFE/manifest.safe</file>
+    </parameters>
+  </node>
+  <node id="TOPSAR-Split">
+    <operator>TOPSAR-Split</operator>
+    <sources>
+      <sourceProduct refid="Read (1)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <subswath>IW1</subswath>
+      <selectedPolarisations>VV</selectedPolarisations>
+      <firstBurstIndex>1</firstBurstIndex>
+      <lastBurstIndex>9999</lastBurstIndex>
+         <wktAoi>POLYGON((8.646240234375 50.583236614805884,10.612792968749998 50.38750780300316,10.250244140625 49.05946984717053,8.294677734375 49.30363576187125,8.646240234375 50.583236614805884))  </wktAoi>
+    </parameters>
+  </node>
+  <node id="TOPSAR-Split (2)">
+    <operator>TOPSAR-Split</operator>
+    <sources>
+      <sourceProduct refid="Read (2)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <subswath>IW2</subswath>
+      <selectedPolarisations>VV</selectedPolarisations>
+      <firstBurstIndex>1</firstBurstIndex>
+      <lastBurstIndex>9999</lastBurstIndex>
+         <wktAoi>POLYGON((8.646240234375 50.583236614805884,10.612792968749998 50.38750780300316,10.250244140625 49.05946984717053,8.294677734375 49.30363576187125,8.646240234375 50.583236614805884)) </wktAoi>
+    </parameters>
+  </node>
+  <node id="TOPSAR-Split (3)">
+    <operator>TOPSAR-Split</operator>
+    <sources>
+      <sourceProduct refid="Read (3)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <subswath>IW3</subswath>
+      <selectedPolarisations>VV</selectedPolarisations>
+      <firstBurstIndex>1</firstBurstIndex>
+      <lastBurstIndex>9999</lastBurstIndex>
+         <wktAoi>POLYGON((8.646240234375 50.583236614805884,10.612792968749998 50.38750780300316,10.250244140625 49.05946984717053,8.294677734375 49.30363576187125,8.646240234375 50.583236614805884)) </wktAoi>
+    </parameters>
+  </node>
+  <node id="Read (4)">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/codede/Sentinel-1/SAR/SLC/2022/03/14/S1A_IW_SLC__1SDV_20220314T053442_20220314T053510_042313_050B38_0B46.SAFE/manifest.safe</file>
+    </parameters>
+  </node>
+  <node id="Read (5)">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/codede/Sentinel-1/SAR/SLC/2022/03/14/S1A_IW_SLC__1SDV_20220314T053442_20220314T053510_042313_050B38_0B46.SAFE/manifest.safe</file>
+    </parameters>
+  </node>
+  <node id="Read (6)">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/codede/Sentinel-1/SAR/SLC/2022/03/14/S1A_IW_SLC__1SDV_20220314T053442_20220314T053510_042313_050B38_0B46.SAFE/manifest.safe</file>
+    </parameters>
+  </node>
+  <node id="TOPSAR-Split (4)">
+    <operator>TOPSAR-Split</operator>
+    <sources>
+      <sourceProduct refid="Read (4)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <subswath>IW1</subswath>
+      <selectedPolarisations>VV</selectedPolarisations>
+      <firstBurstIndex>1</firstBurstIndex>
+      <lastBurstIndex>9999</lastBurstIndex>
+         <wktAoi>POLYGON((8.646240234375 50.583236614805884,10.612792968749998 50.38750780300316,10.250244140625 49.05946984717053,8.294677734375 49.30363576187125,8.646240234375 50.583236614805884)) </wktAoi>
+    </parameters>
+  </node>
+  <node id="TOPSAR-Split (5)">
+    <operator>TOPSAR-Split</operator>
+    <sources>
+      <sourceProduct refid="Read (5)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <subswath>IW2</subswath>
+      <selectedPolarisations>VV</selectedPolarisations>
+      <firstBurstIndex>1</firstBurstIndex>
+      <lastBurstIndex>9999</lastBurstIndex>
+         <wktAoi>POLYGON((8.646240234375 50.583236614805884,10.612792968749998 50.38750780300316,10.250244140625 49.05946984717053,8.294677734375 49.30363576187125,8.646240234375 50.583236614805884)) </wktAoi>
+    </parameters>
+  </node>
+  <node id="TOPSAR-Split (6)">
+    <operator>TOPSAR-Split</operator>
+    <sources>
+      <sourceProduct refid="Read (6)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <subswath>IW3</subswath>
+      <selectedPolarisations>VV</selectedPolarisations>
+      <firstBurstIndex>1</firstBurstIndex>
+      <lastBurstIndex>9999</lastBurstIndex>
+         <wktAoi>POLYGON((8.646240234375 50.583236614805884,10.612792968749998 50.38750780300316,10.250244140625 49.05946984717053,8.294677734375 49.30363576187125,8.646240234375 50.583236614805884)) </wktAoi>
+    </parameters>
+  </node>
+  <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="TOPSAR-Split"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/media/data_storage/jennifer/development/test_output/spacial_output/S1A_IW_SLC__1SDV_20220314T053418_20220314T053445_042313_050B38_C57E_sw1_split</file>
+      <formatName>BEAM-DIMAP</formatName>
+    </parameters>
+  </node>
+ <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="TOPSAR-Split (2)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/media/data_storage/jennifer/development/test_output/spacial_output/S1A_IW_SLC__1SDV_20220314T053418_20220314T053445_042313_050B38_C57E_sw2_split</file>
+      <formatName>BEAM-DIMAP</formatName>
+    </parameters>
+  </node>
+ <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="TOPSAR-Split (3)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/media/data_storage/jennifer/development/test_output/spacial_output/S1A_IW_SLC__1SDV_20220314T053418_20220314T053445_042313_050B38_C57E_sw3_split</file>
+      <formatName>BEAM-DIMAP</formatName>
+    </parameters>
+  </node>
+ <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="TOPSAR-Split (4)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/media/data_storage/jennifer/development/test_output/spacial_output/S1A_IW_SLC__1SDV_20220314T053442_20220314T053510_042313_050B38_0B46_sw1_split</file>
+      <formatName>BEAM-DIMAP</formatName>
+    </parameters>
+  </node>
+ <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="TOPSAR-Split (5)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/media/data_storage/jennifer/development/test_output/spacial_output/S1A_IW_SLC__1SDV_20220314T053442_20220314T053510_042313_050B38_0B46_sw2_split</file>
+      <formatName>BEAM-DIMAP</formatName>
+    </parameters>
+  </node>
+ <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="TOPSAR-Split (6)"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>/media/data_storage/jennifer/development/test_output/spacial_output/S1A_IW_SLC__1SDV_20220314T053442_20220314T053510_042313_050B38_0B46_sw3_split</file>
+      <formatName>BEAM-DIMAP</formatName>
+    </parameters>
+  </node>
+</graph>

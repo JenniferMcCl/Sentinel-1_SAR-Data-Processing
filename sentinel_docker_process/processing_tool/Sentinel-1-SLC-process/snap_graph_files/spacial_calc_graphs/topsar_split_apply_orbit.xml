@@ -1,0 +1,51 @@
+<graph id="Graph"> 
+<version>1.0</version>
+        <node id="Read (1)">
+                  <operator>Read</operator>
+                  <sources/>
+                  <parameters>
+                            <file></file>
+                            <formatName>SENTINEL-1</formatName>
+                            <sourceBands/>
+                            <sourceMasks/>
+                            <pixelRegion/>
+                            <geometryRegion/>
+                            <copyMetadata>true</copyMetadata>
+                  </parameters>
+        </node><node id="TOPSAR-Split">
+                  <operator>TOPSAR-Split</operator>
+                  <sources>
+                            <sourceProduct refid="Read (1)"/>
+                  </sources>
+                  <parameters>
+                            <subswath>IW2</subswath>
+                            <selectedPolarisations>VV</selectedPolarisations>
+                             <firstBurstIndex>1</firstBurstIndex>
+                              <lastBurstIndex>9</lastBurstIndex>
+                            <wktAoi></wktAoi>
+                  </parameters>
+        </node><node id="Apply-Orbit-File">
+                  <operator>Apply-Orbit-File</operator>
+                  <sources>
+                            <sourceProduct refid="TOPSAR-Split"/>
+                  </sources>
+                  <parameters>
+                            <orbitType>Sentinel Precise (Auto Download)</orbitType>
+                            <polyDegree>3</polyDegree>
+                            <continueOnFail>true</continueOnFail>
+                  </parameters>
+        </node>
+        <node id="Write">
+                  <operator>Write</operator>
+                  <sources>
+                            <sourceProduct refid="TOPSAR-Split"/>
+                  </sources>
+                  <parameters>
+                            <file></file>
+                            <formatName>BEAM-DIMAP</formatName>
+                            <deleteOutputOnFailure>true</deleteOutputOnFailure>
+                            <writeEntireTileRows>false</writeEntireTileRows>
+                            <clearCacheAfterRowWrite>false</clearCacheAfterRowWrite>
+                  </parameters>
+        </node>
+</graph>

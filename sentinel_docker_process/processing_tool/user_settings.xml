@@ -1,0 +1,14 @@
+<root>
+  <paths>
+    <data name="sentinel data">/processing_tool/test_output/</data>
+    <cohOutput name="coherence output">/processing_tool/test_output/coherence/</cohOutput>
+    <backscatterOutput name="backscatter result">/processing_tool/test_output/backscatter/</backscatterOutput>
+    <vegIdOutput name="dp veg id output">/processing_tool/test_output/veg_id/</vegIdOutput>
+   <calculationStartDate name="start date for calculation">2020-01-01</calculationStartDate>
+    <calculationEndDate name="end date for calculation">2020-12-31</calculationEndDate>
+    <aoiLocation name="coordinates of Aoi for calculation">/processing_tool/AOI.geojson</aoiLocation>
+    <areaName name="name of area">AOI-Name</areaName>
+    <processingSequence name="sequence to process">Backscatter</processingSequence>
+    <listToProcess name="scene list to process as txt file"></listToProcess>
+    <processingMode name="Mode to handle derived scenes">AOI Processing</processingMode></paths>
+</root>
