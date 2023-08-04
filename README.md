@@ -2,7 +2,7 @@
 [Jennifer McClelland](https://gitea.julius-kuehn.de/Jennifer.McClelland),
 [Karlmarx Thangamani](https://gitea.julius-kuehn.de/Karlmarx.Thangamani),
 [Tanja Riedel](https://gitea.julius-kuehn.de/Tanja.Riedel),
-[Florian Beyer](https://gitea.julius-kuehn.de/Florin.Beyer), Date 2022-12-16, Version 0.1 beta
+[Florian Beyer](https://gitea.julius-kuehn.de/Florin.Beyer), Date 2023-08-04, Version 0.1 beta
 
 # Processing Sentinel-1 SAR data to ARD
 
